@@ -105,19 +105,23 @@ nav{
 .hero-image::after{
   content:'';
   position:absolute;
-  width:80%;
+  width:70%;
   height:80px;
   bottom:10px;
-  left:50%;
+  left:55%;
   transform:translateX(-50%);
   background:rgba(255,91,23,.5);
-  filter:blur(45px);
+  filter:blur(40px);
   z-index:0;
 }
 
 .hero-image img{
   position:relative;
   z-index:2;
+  width:100%;
+  max-width:520px;
+  height:auto;
+  margin:0 auto;
   border-radius:12px;
 }
 
@@ -198,6 +202,16 @@ nav{
 
   font-size:17px;
   font-weight:700;
+}
+
+.main-btn .arrow{
+  width:15px;
+  height:15px;
+    margin-left:12px;
+  background-image: url("assets/right-arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 /* ================= INFO ================= */
@@ -766,31 +780,82 @@ footer{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:1100px){
+@media(max-width:1200px){
+  .container{
+    width:95%;
+  }
 
   .hero-wrapper{
     grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .cta-box{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:1024px){
+  .hero h1{
+    font-size:32px;
+  }
+
+  .section-title{
+    font-size:28px;
   }
 
   .top-cards,
   .why-grid,
-  .vehicles-grid,
-  .steps-grid{
-    grid-template-columns:1fr 1fr;
+  .vehicles-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  
+  .steps-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
+  .step-line{
+    display:none;
+  }
 }
 
 @media(max-width:768px){
+  .container{
+    width:95%;
+  }
+
+  header{
+    padding:12px 0;
+  }
 
   .nav-links{
     display:none;
   }
 
+  .logo img{
+    width:150px;
+    height:45px;
+  }
+
+  .hero{
+    padding:20px 0 0;
+  }
+
   .hero h1{
-    font-size:40px;
+    font-size:28px;
+  }
+
+  .hero-subtitle{
+    font-size:16px;
+  }
+
+  .hero-text{
+    font-size:13px;
   }
 
   .top-cards,
@@ -798,11 +863,82 @@ footer{
   .vehicles-grid,
   .steps-grid{
     grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .top-card{
+    padding:25px 20px;
+    border-radius:16px;
+  }
+
+  .top-card h3{
+    font-size:36px;
+  }
+
+  .top-card p{
+    font-size:14px;
+  }
+
+  .info-strip{
+    flex-direction:column;
+    margin-top:30px;
+    gap:15px;
+  }
+
+  .info-item-fund,
+  .info-item-refund,
+  .info-item-principle{
+    padding:15px 18px;
+  }
+
+  .info-item p{
+    font-size:12px;
+  }
+
+  .section-title{
+    font-size:24px;
+    margin-bottom:30px;
+  }
+
+  .why{
+    margin-top:60px;
+  }
+
+  .why-card{
+    padding:25px 20px;
+    border-radius:16px;
+  }
+
+  .why-card h3{
+    font-size:36px;
+  }
+
+  .why-card h4{
+    font-size:16px;
+  }
+
+  .why-card p{
+    font-size:12px;
+  }
+
+  .brands{
+    margin-top:60px;
   }
 
   .brands-wrapper{
     flex-direction:column;
-    gap:20px;
+    gap:15px;
+    padding:20px 25px;
+    border-radius:16px;
+  }
+
+  .brand-item-mg,
+  .brand-item-changan,
+  .brand-item-souest,
+  .brand-item-jetour{
+    width:150px;
+    height:100px;
+    margin:0 auto;
   }
 
   .separator{
@@ -810,10 +946,377 @@ footer{
     height:1px;
   }
 
-  .info-strip{
-    flex-direction:column;
+  .brands-text{
+    margin-top:15px;
+    font-size:14px;
   }
 
-  
+  .vehicles{
+    margin-top:60px;
+  }
 
+  .vehicle-card{
+    padding:18px;
+    border-radius:16px;
+  }
+
+  .vehicle-card img{
+    height:140px;
+    border-radius:12px;
+  }
+
+  .vehicle-card h3{
+    font-size:18px;
+    margin-top:15px;
+  }
+
+  .vehicle-card p{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:16px;
+  }
+
+  .price span{
+    font-size:28px;
+  }
+
+  .vehicle-card button{
+    margin-top:15px;
+    padding:10px;
+    font-size:12px;
+  }
+
+  .steps{
+    margin-top:60px;
+    padding-bottom:40px;
+  }
+
+  .step-number{
+    width:45px;
+    height:45px;
+    font-size:18px;
+  }
+
+  .step-icon-doc,
+  .step-icon-support,
+  .step-icon-car,
+  .step-icon-key{
+    width:40px;
+    height:40px;
+    margin-left:8px;
+  }
+
+  .step-card h3{
+    font-size:16px;
+  }
+
+  .step-card p{
+    font-size:12px;
+  }
+
+  .cta{
+    margin-top:60px;
+  }
+
+  .cta h2{
+    font-size:28px;
+    margin-bottom:30px;
+  }
+
+  .cta-box{
+    grid-template-columns:1fr;
+    padding:25px;
+    gap:20px;
+    border-radius:20px;
+  }
+
+  .cta-box img{
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+  }
+
+  .cta-content h3{
+    font-size:20px;
+  }
+
+  .cta-content p{
+    font-size:13px;
+  }
+
+  .main-btn{
+    padding:14px 28px;
+    font-size:14px;
+    margin-top:20px;
+  }
+
+  footer{
+    margin-top:60px;
+    padding:30px 0;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .footer-left p{
+    font-size:13px;
+  }
+
+  .footer-contact h4,
+  .footer-social h4{
+    font-size:14px;
+  }
+
+  .footer-contact p{
+    font-size:12px;
+  }
+
+  .socials{
+    gap:10px;
+  }
+
+  .social{
+    width:40px;
+    height:40px;
+    font-size:14px;
+  }
+}
+
+@media(max-width:480px){
+  .container{
+    width:90%;
+  }
+
+  header{
+    padding:10px 0;
+  }
+
+  .logo img{
+    width:120px;
+    height:35px;
+  }
+
+  .hero h1{
+    font-size:24px;
+    margin-bottom:15px;
+  }
+
+  .hero-subtitle{
+    font-size:13px;
+    margin-bottom:10px;
+  }
+
+  .hero-text{
+    font-size:12px;
+  }
+
+  .top-cards{
+    gap:12px;
+  }
+
+  .top-card{
+    padding:20px 15px;
+  }
+
+  .top-card h3{
+    font-size:32px;
+  }
+
+  .top-card p{
+    font-size:12px;
+  }
+
+  .main-btn{
+    padding:12px 24px;
+    font-size:13px;
+    margin-top:25px;
+  }
+
+  .info-strip{
+    gap:10px;
+    margin-top:25px;
+  }
+
+  .info-item-fund,
+  .info-item-refund,
+  .info-item-principle{
+    padding:12px 15px;
+  }
+
+  .info-item-fund div,
+  .info-item-refund div,
+  .info-item-principle div{
+    width:20px;
+    height:20px;
+  }
+
+  .info-item p{
+    font-size:11px;
+  }
+
+  .section-title{
+    font-size:20px;
+    margin-bottom:25px;
+  }
+
+  .why{
+    margin-top:50px;
+  }
+
+  .why-card{
+    padding:20px 15px;
+    border-radius:12px;
+  }
+
+  .why-card h3{
+    font-size:28px;
+  }
+
+  .why-card h4{
+    font-size:14px;
+    margin:12px 0 8px;
+  }
+
+  .why-card p{
+    font-size:11px;
+  }
+
+  .why-icon-insurance,
+  .why-icon-time,
+  .why-icon-support{
+    width:40px;
+    height:40px;
+  }
+
+  .brands{
+    margin-top:50px;
+  }
+
+  .brands-wrapper{
+    padding:15px 20px;
+  }
+
+  .brand-item-mg,
+  .brand-item-changan,
+  .brand-item-souest,
+  .brand-item-jetour{
+    width:120px;
+    height:80px;
+  }
+
+  .brands-text{
+    font-size:12px;
+    margin-top:12px;
+  }
+
+  .vehicles{
+    margin-top:50px;
+  }
+
+  .vehicle-card{
+    padding:15px;
+  }
+
+  .vehicle-card img{
+    height:120px;
+  }
+
+  .vehicle-card h3{
+    font-size:16px;
+    margin-top:12px;
+  }
+
+  .vehicle-card p{
+    font-size:11px;
+  }
+
+  .price{
+    font-size:14px;
+  }
+
+  .price span{
+    font-size:24px;
+  }
+
+  .steps{
+    margin-top:50px;
+    padding-bottom:30px;
+  }
+
+  .step-number{
+    width:40px;
+    height:40px;
+    font-size:16px;
+  }
+
+  .step-icon-doc,
+  .step-icon-support,
+  .step-icon-car,
+  .step-icon-key{
+    width:35px;
+    height:35px;
+    margin-left:5px;
+  }
+
+  .step-card h3{
+    font-size:14px;
+  }
+
+  .step-card p{
+    font-size:11px;
+  }
+
+  .cta{
+    margin-top:50px;
+  }
+
+  .cta h2{
+    font-size:22px;
+    margin-bottom:25px;
+  }
+
+  .cta-box{
+    padding:20px;
+  }
+
+  .cta-box img{
+    height:180px;
+  }
+
+  .cta-content h3{
+    font-size:18px;
+  }
+
+  .cta-content p{
+    font-size:12px;
+  }
+
+  footer{
+    margin-top:50px;
+    padding:25px 0;
+  }
+
+  .footer-contact h4,
+  .footer-social h4{
+    font-size:13px;
+  }
+
+  .footer-contact p,
+  .footer-left p{
+    font-size:11px;
+  }
+
+  .socials{
+    gap:8px;
+  }
+
+  .social{
+    width:36px;
+    height:36px;
+    font-size:12px;
+  }
 }
