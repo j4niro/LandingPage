@@ -287,8 +287,8 @@ nav{
   border:1px solid rgba(255,255,255,.08);
 }
 .info-item-fund div{
-  width: 31px;
-  height: 31px;
+  width: 35px;
+  height: 35px;
   background-image: url("assets/fund.png");
   background-repeat: no-repeat;
   background-position: center;
