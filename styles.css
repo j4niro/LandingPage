@@ -21,7 +21,7 @@ a{
 }
 
 :root{
-  --orange:#ff5b17;
+  --orange:#FF3C00;
   --card:#050505;
 }
 
@@ -168,9 +168,14 @@ nav{
   width:50px;
   height:50px;
   margin:0 auto 12px;
-  background-image: url("assets/insurance.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--orange);
+  -webkit-mask-image: url("assets/insurance.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url("assets/insurance.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   background-size: contain;
 }
 
@@ -178,9 +183,14 @@ nav{
   width:50px;
   height:50px;
   margin:0 auto 12px;
-  background-image: url("assets/clipboard (3).png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--orange);
+  -webkit-mask-image: url("assets/clipboard (3).png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url("assets/clipboard (3).png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   background-size: contain;
 }
 
@@ -372,9 +382,14 @@ nav{
   width:50px;
   height:50px;
   margin:0 auto;
-  background-image: url("assets/insurance.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--orange);
+  -webkit-mask-image: url("assets/insurance.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url("assets/insurance.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   background-size: contain;
 }
 
@@ -382,9 +397,14 @@ nav{
   width:50px;
   height:50px;
   margin:0 auto;
-  background-image: url("assets/quick-response.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--orange);
+  -webkit-mask-image: url("assets/quick-response.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url("assets/quick-response.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   background-size: contain;
 }
 
@@ -392,9 +412,14 @@ nav{
   width:50px;
   height:50px;
   margin:0 auto;
-  background-image: url("assets/customer-support.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--orange);
+  -webkit-mask-image: url("assets/customer-support.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url("assets/customer-support.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   background-size: contain;
 }
 
